@@ -13,6 +13,7 @@ export class ProductFormComponent implements OnInit {
   constructor(private ebayProducts: EbayProductApiService) { }
   getProducts(keyword: string) {
     this.ebayProducts.findItemsByKeywords(keyword).subscribe(response => {
+        debugger;
       this.products = response.json();
     });
   }
