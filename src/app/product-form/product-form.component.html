@@ -1,15 +1,15 @@
-<div id="form-div">  
+<div id="form-div">
   <div id="padding-div">
 
   </div>
-  <h1>Ebay Items</h1>
+  <h1><img src="https://upload.wikimedia.org/wikipedia/commons/4/48/EBay_logo.png" alt="eBay" height="42" width="82">Items</h1>
 
   <form>
     <div class="form-group">
       <label for="keyword">Search: </label>
-      <input type="text" #keyword>
+      <input class="form-control" type="text" #keyword>
     </div>
-    <button (click)="getProducts(keyword.value)">Get Products</button>
+    <button class="btn btn-primary" (click)="getProducts(keyword.value)">Get Products</button>
   </form>
 
   <div *ngIf="products">

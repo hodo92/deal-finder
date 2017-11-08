@@ -5,7 +5,7 @@
 #### By _Margaret Berry, Sarah Lindmar, David Hale, and Qudsia Ahmad_
 
 ## Setup and Installation Instructions
-1. `$ git clone [this repository](https://github.com/phuzisham/deal-finder.git)`
+1. `$ git clone` [this repository](https://github.com/phuzisham/deal-finder.git)
 2. `$ cd deal-finder`
 3. `$ npm install`
 4. `$ bower install -g` _to install bower if needed_
