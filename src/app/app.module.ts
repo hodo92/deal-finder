@@ -7,12 +7,18 @@ import { AppComponent } from './app.component';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 import { ProductFormComponent } from './product-form/product-form.component';
 import { ProductComponent } from './product/product.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { EbayProductApiService } from './ebay-product-api.service';
 import { HeaderComponent } from './header/header.component';
+import { PublicComponent } from './public/public.component';
+import { PrivateComponent } from './private/private.component';
+import { AuthGuard } from './auth-guard.service';
+import { AuthenticationService } from './authentication.service';
 import { FooterComponent } from './footer/footer.component';
+
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -28,6 +34,8 @@ export const firebaseConfig = {
     ProductComponent,
     ProductListComponent,
     HeaderComponent,
+    PublicComponent,
+    PrivateComponent,
     FooterComponent
   ],
   imports: [
@@ -36,9 +44,10 @@ export const firebaseConfig = {
     HttpModule,
     routing,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
-  providers: [EbayProductApiService],
+  providers: [EbayProductApiService, AuthGuard, AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
