@@ -1,0 +1,19 @@
+<h1>Amazon Search</h1>
+
+<form>
+  <div class="form-group">
+    <label for="amKeyword">Keyword</label>
+    <input type="text" #amKeyword>
+  </div>
+  <div class="form-group">
+    <label for="category">Category</label>
+    <select #category>
+      <option value="Appliances">Appliances</option>
+      <option  value="Books">Books</option>
+      <option value="Electronics">Electronics</option>
+      <option  value="Fashion">Fashion</option>
+      <option  value="Music">Music</option>
+    </select>
+  </div>
+  <button (click)="getAmazonResults(category.value,amKeyword.value)">Get Results</button>
+</form>
