@@ -1,5 +1,5 @@
 <h1>Products List</h1>
 <div *ngFor="let product of childProducts.findItemsByKeywordsResponse[0].searchResult[0].item;" class="product">
-  <p>{{product.title}}</p><a href="{{product.viewItemURL[0]}}"><img src="{{product.galleryURL}}"></a>
+  <p>{{product.title}}</p><a target="_blank" href="{{product.viewItemURL[0]}}"><img src="{{product.galleryURL}}"></a>
   <p>Current price: ${{product.sellingStatus[0].currentPrice[0].__value__}}</p>
 </div>
