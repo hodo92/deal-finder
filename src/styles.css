@@ -1,19 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50px;
-  padding: 12px;
-  margin-bottom: 20px;
-  background-color: #322925;
-  z-index: 1;
-}
+
+
+
 
 #name {
   float: right;
   font-weight: 600;
   font-size: 20px;
   color: #a3998b;
+}
+
+#padding-div {
+  margin-top: 100px;
+}
+
+body {
+  background-color: #92bbfc;
 }
