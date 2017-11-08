@@ -1,0 +1,13 @@
+<h1>Ebay Items</h1>
+
+<form>
+  <div class="form-group">
+    <label for="keyword">Search: </label>
+    <input type="text" #keyword>
+  </div>
+  <button (click)="getProducts(keyword.value)">Get Products</button>
+</form>
+
+<div *ngIf="products">
+  <app-product-list [childProducts]="products"></app-product-list>
+</div>

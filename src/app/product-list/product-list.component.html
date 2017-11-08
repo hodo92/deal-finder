@@ -1,0 +1,4 @@
+<h1>Products List</h1>
+<div *ngFor="let product of childProducts.findItemsByKeywordsResponse[0].searchResult[0].item;" class="product">
+  <p>{{product.title}}</p>
+</div>
