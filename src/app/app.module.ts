@@ -17,6 +17,8 @@ import { PublicComponent } from './public/public.component';
 import { PrivateComponent } from './private/private.component';
 import { AuthGuard } from './auth-guard.service';
 import { AuthenticationService } from './authentication.service';
+import { FooterComponent } from './footer/footer.component';
+
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -33,7 +35,8 @@ export const firebaseConfig = {
     ProductListComponent,
     HeaderComponent,
     PublicComponent,
-    PrivateComponent
+    PrivateComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

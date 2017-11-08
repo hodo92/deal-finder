@@ -5,7 +5,7 @@ import { ProductFormComponent } from './product-form/product-form.component';
 import { HeaderComponent } from './header/header.component';
 import { PublicComponent } from './public/public.component';
 import { PrivateComponent } from './private/private.component';
-
+import { FooterComponent } from './footer/footer.component';
 
 const appRoutes: Routes = [
   {
@@ -25,6 +25,11 @@ const appRoutes: Routes = [
   {
     path: 'private',
     component: PrivateComponent
+  },
+  {
+    path: '',
+    component: FooterComponent,
+    outlet: 'siteFooter'
   }
 ];
 

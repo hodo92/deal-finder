@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AuthenticationService } from '../authentication.service';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -33,4 +34,5 @@ export class HeaderComponent {
   logout() {
     this.authService.logout();
   }
+
 }

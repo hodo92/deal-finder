@@ -1,13 +1,18 @@
-<h1>Ebay Items</h1>
+<div id="form-div">
+  <div id="padding-div">
 
-<form>
-  <div class="form-group">
-    <label for="keyword">Search: </label>
-    <input type="text" #keyword>
   </div>
-  <button (click)="getProducts(keyword.value)">Get Products</button>
-</form>
+  <h1><img src="https://upload.wikimedia.org/wikipedia/commons/4/48/EBay_logo.png" alt="eBay" height="42" width="82">Items</h1>
 
-<div *ngIf="products">
-  <app-product-list [childProducts]="products"></app-product-list>
+  <form>
+    <div class="form-group">
+      <label for="keyword">Search: </label>
+      <input class="form-control" type="text" #keyword>
+    </div>
+    <button class="btn btn-primary" (click)="getProducts(keyword.value)">Get Products</button>
+  </form>
+
+  <div *ngIf="products">
+    <app-product-list [childProducts]="products"></app-product-list>
+  </div>
 </div>
