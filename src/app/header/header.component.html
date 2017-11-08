@@ -1,0 +1,14 @@
+<header class="header">
+  <div id="headerA">
+      <a routerLink="">Authentication Example</a>
+    <ul class="nav navbar-nav navbar-right">
+      <li *ngIf="isLoggedIn">
+        <a>{{userName}}</a>
+        <a (click)="logout()">Log out</a>
+      </li>
+      <li *ngIf ="!isLoggedIn">
+        <a (click)="authLogin()">Log in</a>
+      </li>
+    </ul>
+  </div>
+</header>
