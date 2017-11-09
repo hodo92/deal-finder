@@ -2,4 +2,5 @@
 <div *ngFor="let product of childProducts.findItemsByKeywordsResponse[0].searchResult[0].item;" class="product">
   <p>{{product.title}}</p><a target="_blank" href="{{product.viewItemURL[0]}}"><img src="{{product.galleryURL}}"></a>
   <p>Current price: ${{product.sellingStatus[0].currentPrice[0].__value__}}</p>
+  <button class="btn btn-primary" (click)="saveProduct(product.title, product.galleryURL, product.viewItemURL[0], product.sellingStatus[0].currentPrice[0].__value__)">Save Product</button>
 </div>

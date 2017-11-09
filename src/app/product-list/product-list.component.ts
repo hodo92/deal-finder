@@ -9,6 +9,11 @@ export class ProductListComponent {
   @Input() childProducts;
   constructor() { }
 
+  // saveRoverImages(date, camera){
+  //     this.marsRoverPhotos.saveImages(date, camera);
+  //     alert("Your item has been saved to the database.")
+  //   }
+
   ngOnInit() {
   }
 
