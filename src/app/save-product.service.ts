@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Product } from './product.model';
 import { Observable } from 'rxjs/Observable';
-import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 
 @Injectable()
 export class SaveProductService {
-  products: FirebaseListObservable<any[]>;
+  products: AngularFireList<Product>;
   constructor(private af: AngularFireDatabase) {
     this.products = af.list('products');
   }
