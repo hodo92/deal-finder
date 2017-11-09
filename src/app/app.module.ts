@@ -12,13 +12,13 @@ import { ProductFormComponent } from './product-form/product-form.component';
 import { ProductComponent } from './product/product.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { EbayProductApiService } from './ebay-product-api.service';
+import { SaveProductService } from './save-product.service';
 import { HeaderComponent } from './header/header.component';
 import { PublicComponent } from './public/public.component';
 import { PrivateComponent } from './private/private.component';
 import { AuthGuard } from './auth-guard.service';
 import { AuthenticationService } from './authentication.service';
 import { FooterComponent } from './footer/footer.component';
-
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -47,7 +47,7 @@ export const firebaseConfig = {
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
-  providers: [EbayProductApiService, AuthGuard, AuthenticationService],
+  providers: [EbayProductApiService, AuthGuard, AuthenticationService, SaveProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
