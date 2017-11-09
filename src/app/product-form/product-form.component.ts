@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { EbayProductApiService } from '../ebay-product-api.service';
 
@@ -8,16 +8,12 @@ import { EbayProductApiService } from '../ebay-product-api.service';
   styleUrls: ['./product-form.component.css'],
   providers: [ EbayProductApiService ]
 })
-export class ProductFormComponent implements OnInit {
-  products: any[]=null;
+export class ProductFormComponent {
+  products: any[] = null;
   constructor(private ebayProducts: EbayProductApiService) { }
   getProducts(keyword: string) {
     this.ebayProducts.findItemsByKeywords(keyword).subscribe(response => {
       this.products = response.json();
-      console.log(this.products);
     });
   }
-  ngOnInit() {
-  }
-
 }
