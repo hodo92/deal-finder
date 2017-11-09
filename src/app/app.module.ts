@@ -14,11 +14,10 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { EbayProductApiService } from './ebay-product-api.service';
 import { SaveProductService } from './save-product.service';
 import { HeaderComponent } from './header/header.component';
-import { PublicComponent } from './public/public.component';
-import { PrivateComponent } from './private/private.component';
 import { AuthGuard } from './auth-guard.service';
 import { AuthenticationService } from './authentication.service';
 import { FooterComponent } from './footer/footer.component';
+import { UserViewComponent } from './user-view/user-view.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -34,9 +33,8 @@ export const firebaseConfig = {
     ProductComponent,
     ProductListComponent,
     HeaderComponent,
-    PublicComponent,
-    PrivateComponent,
-    FooterComponent
+    FooterComponent,
+    UserViewComponent
   ],
   imports: [
     BrowserModule,
