@@ -18,11 +18,11 @@ export class HeaderComponent {
     this.authService.user.subscribe(user => {
       if (user == null) {
         this.isLoggedIn = false;
-        this.router.navigate(['public']);
+        this.router.navigate(['']);
       } else {
         this.isLoggedIn = true;
         this.userName = user.displayName;
-        this.router.navigate([]);
+        this.router.navigate(['user-view']);
       }
     });
 

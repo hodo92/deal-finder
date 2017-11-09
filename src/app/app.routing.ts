@@ -3,9 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ProductFormComponent } from './product-form/product-form.component';
 import { HeaderComponent } from './header/header.component';
-import { PublicComponent } from './public/public.component';
-import { PrivateComponent } from './private/private.component';
 import { FooterComponent } from './footer/footer.component';
+import { UserViewComponent } from './user-view/user-view.component';
+import { AuthGuard } from './auth-guard.service';
 
 const appRoutes: Routes = [
   {
@@ -19,17 +19,14 @@ const appRoutes: Routes = [
     outlet: 'siteHeader'
   },
   {
-    path: 'public',
-    component: PublicComponent
-  },
-  {
-    path: 'private',
-    component: PrivateComponent
-  },
-  {
     path: '',
     component: FooterComponent,
     outlet: 'siteFooter'
+  },
+  {
+  path: 'user-view',
+  component: UserViewComponent,
+  canActivate: [AuthGuard]
   }
 ];
 
