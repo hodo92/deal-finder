@@ -12,13 +12,9 @@ export class ProductListComponent {
   @Input() childProducts;
   constructor(private saveProductService: SaveProductService) { }
 
-  saveProduct(title: string, galleryURL: string, viewItemURL: string, price: number){
+  saveProduct(title: string, galleryURL: string, viewItemURL: string, price: number) {
     let newProduct: Product = new Product(title, galleryURL, viewItemURL, price);
       this.saveProductService.addProduct(newProduct);
-      alert("Your item has been saved to the database.")
+      alert('Your item has been saved to the database.');
     }
-
-  ngOnInit() {
-  }
-
 }
