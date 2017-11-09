@@ -12,9 +12,11 @@ export class AmazonFormComponent implements OnInit {
   results: any[]=null;
  constructor(private amazonProductService: AmazonProductApiService) { }
 
- getAmazonResults(category: string, keyword: string) {
-   this.amazonProductService.getByCategoryAndKeyword(category, keyword).subscribe(response => {
+ getAmazonResults(keyword: string) {
+   let today = new Date().toISOString();
+   this.amazonProductService.getByCategoryAndKeyword(keyword).subscribe(response => {
        this.results = response.json();
+       console.log(this.results);
    });
  }
   ngOnInit() {

@@ -15,6 +15,7 @@ import { AmazonProductApiService } from './amazon-product-api.service';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AmazonFormComponent } from './amazon-form/amazon-form.component';
+import { AmazonProductListComponent } from './amazon-product-list/amazon-product-list.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -31,7 +32,8 @@ export const firebaseConfig = {
     ProductListComponent,
     HeaderComponent,
     FooterComponent,
-    AmazonFormComponent
+    AmazonFormComponent,
+    AmazonProductListComponent
   ],
   imports: [
     BrowserModule,

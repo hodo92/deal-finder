@@ -10,7 +10,9 @@ import { EbayProductApiService } from '../ebay-product-api.service';
 })
 export class ProductFormComponent implements OnInit {
   products: any[]=null;
+
   constructor(private ebayProducts: EbayProductApiService) { }
+  
   getProducts(keyword: string) {
     this.ebayProducts.findItemsByKeywords(keyword).subscribe(response => {
       this.products = response.json();
