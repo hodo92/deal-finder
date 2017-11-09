@@ -18,6 +18,7 @@ import { AuthGuard } from './auth-guard.service';
 import { AuthenticationService } from './authentication.service';
 import { FooterComponent } from './footer/footer.component';
 import { UserViewComponent } from './user-view/user-view.component';
+import { PricePipe } from './price.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -34,7 +35,8 @@ export const firebaseConfig = {
     ProductListComponent,
     HeaderComponent,
     FooterComponent,
-    UserViewComponent
+    UserViewComponent,
+    PricePipe
   ],
   imports: [
     BrowserModule,

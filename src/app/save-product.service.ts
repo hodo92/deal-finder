@@ -14,8 +14,12 @@ export class SaveProductService {
     this.products.push(newProduct);
   }
   getProducts() {
+    console.log(this.products);
     return this.products;
   }
+
+  
+
   // deleteProduct(selectedProduct) {
   //   let foundProduct = this.getProductById(selectedProduct.$key);
   //   foundProduct.remove();

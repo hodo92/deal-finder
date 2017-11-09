@@ -1,6 +1,20 @@
 <h1>Products List</h1>
-<div *ngFor="let product of childProducts.findItemsByKeywordsResponse[0].searchResult[0].item;" class="product">
+
+<button class="btn btn-primary" (click)="getProducts()">See Saved Products</button>
+
+<!-- <select (change)="onChange($event.target.value)">
+  <option value="allProducts">All Products</option>
+  <option value="inexpensiveProducts">Products Under $10</option>
+  <option value="expensiveProducts">Products Over $10</option>
+</select> -->
+
+<div *ngFor="let product of childProducts.findItemsByKeywordsResponse[0].searchResult[0].item" class="product" (click)="goToSavedList(product)">
   <p>{{product.title}}</p><a target="_blank" href="{{product.viewItemURL[0]}}"><img src="{{product.galleryURL}}"></a>
   <p>Current price: ${{product.sellingStatus[0].currentPrice[0].__value__}}</p>
   <button class="btn btn-primary" (click)="saveProduct(product.title, product.galleryURL, product.viewItemURL[0], product.sellingStatus[0].currentPrice[0].__value__)">Save Product</button>
 </div>
+
+
+
+<!-- <div *ngFor="let product of childProducts.findItemsByKeywordsResponse[0].searchResult[0].item" class="product">
+   if() -->

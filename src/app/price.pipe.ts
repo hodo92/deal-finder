@@ -11,14 +11,14 @@ import { Product} from './product.model'
       var output: Product[] = [];
    if(desiredPrice === "inexpensiveProducts") {
      for (var i = 0; i < input.length; i++) {
-       if (input[i].expensive === false) {
+       if (input[i].price <= 10) {
          output.push(input[i]);
        }
      }
      return output;
    } else if (desiredPrice === "expensiveProducts") {
      for (var i = 0; i < input.length; i++) {
-       if (input[i].expensive === true) {
+       if (input[i].price > 10) {
          output.push(input[i]);
        }
      }

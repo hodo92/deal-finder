@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Product } from '../product.model';
 import { SaveProductService } from '../save-product.service';
 
@@ -10,6 +10,8 @@ import { SaveProductService } from '../save-product.service';
 })
 export class ProductListComponent {
   @Input() childProducts;
+  @Output() clickSender = new EventEmitter();
+  filterByPrice: string = "inexpensiveProducts";
   constructor(private saveProductService: SaveProductService) { }
 
   saveProduct(title: string, galleryURL: string, viewItemURL: string, price: number) {
@@ -17,4 +19,14 @@ export class ProductListComponent {
       this.saveProductService.addProduct(newProduct);
       alert('Your item has been saved to the database.');
     }
-}
+
+  onChange(optionFromMenu) {
+    this.filterByPrice = optionFromMenu;
+  }
+
+  //  isExpensive(price) {
+  //    if (price < 10) {
+  //     price.price =  true;
+  //    }
+  //   }
+   }
