@@ -1,3 +1,9 @@
-<p>
-  user-view works!
-</p>
+
+
+<div id="userProd">
+  <h3>You are now logged in</h3>
+<h4>Here are your saved products:</h4>
+</div>
+<ul *ngFor="let product of products">
+  <li>{{product.title | async}}</li>
+</ul>
