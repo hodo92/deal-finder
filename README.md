@@ -5,6 +5,8 @@
 #### By _Margaret Berry, Sarah Lindmar, David Hale, and Qudsia Ahmad_
 
 ## Setup and Installation Instructions
+_IMPORTANT: You need to install [this Chrome extension](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en). You will need to have it turned OFF (red) to login, and then turned ON (green) in order to use the search function._
+
 1. `$ git clone` [this repository](https://github.com/phuzisham/deal-finder.git)
 2. `$ cd deal-finder`
 3. `$ npm install`
@@ -20,19 +22,23 @@
 * _Click 'Realtime Database,' then 'Rules.' Set the value of .read and .write to 'true' and click 'publish.'_
 * _'Click 'Data,' then click the three dots in the upper righthand corner. Select 'Import JSON' and navigate to 'sample-products.json' from this project._
 
-_IMPORTANT: You may need to install [this Chrome extension](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en) for the search function to work._
-
 ## User Stories
 * _As a user, I want to..._
 * _Search for a keyword on eBay and see a list of products with that keyword._
+* _Click on an image to see product details._
+* _Login with my Google account._
+* _Save products to the database._
 
 ## Future Features
 * _As a user, I want to..._
+* _Sort items by price._
 * _See price history over time._
-* _Click on an image to see product details._
+* _View list of saved products._
+* _Search for a keyword on Amazon and Craigslist and see a list of products with that keyword._
+* _Compare product prices across selling platforms._
 
 ## Bugs
-_There are no known bugs at this time._
+_The app only works with the specified Chrome extension, and you need to turn it on and off to use different functions._
 
 ## Angular Information
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
